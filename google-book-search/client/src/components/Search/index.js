@@ -1,12 +1,13 @@
-import React from "react";
+// import React from "react";
 
-export default function Search(props) {
-  return (
-    <div className="form-group">
-      <input className="form-control" onChange={props.searchFn} />
-      <button className="btn btn-danger" onClick={props.clickFn}>
-        Search!
-      </button>
-    </div>
-  );
-}
+// function Search({ children }) {
+//   return (
+//     <div>
+//       <div className="container">
+//         <h1>Google Book Search</h1>
+//       </div>
+//       {children}
+//     </div>
+//   );
+// }
+// export default Search;

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../utils/API";
-import Saved from "../components/Saved/index";
+import Saved from "../components/Saved";
 
-function savedBooks() {
+function SaveBooks() {
+  // const [formObject, setFormObject] = useState({});
   const [books, setBooks] = useState([]);
-  const [formObject, setFormObject] = useState({});
 
   function loadBooks() {
     API.getBooks()
@@ -12,28 +12,30 @@ function savedBooks() {
       .catch((err) => console.log(err));
   }
   useEffect(() => {
-    loadBooks;
+    loadBooks();
   }, []);
 
   return (
-    <div>
-      <ul>
-        {books.map((book) => {
-          return (
-            <Saved
-              title={book.title}
-              authors={book.authors}
-              description={book.description}
-              link={book.link}
-              image={book.image}
-              key={book._id}
-              id={book._id}
-            />
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      <div>
+        <ul>
+          {books.map((book) => {
+            return (
+              <Saved
+                title={book.title}
+                authors={book.authors}
+                description={book.description}
+                link={book.link}
+                image={book.image}
+                key={book._id}
+                id={book._id}
+              />
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 }
 
-export default savedBooks;
+export default SaveBooks;

@@ -1,24 +1,30 @@
 import React from "react";
 
-function Header() {
-  // const [name, setName] = useState("Jack");
-
-  // useEffect(() => {
-  //   console.log("hello");
-  //   changeName();
-  // });
-
-  // const changeName = (event) => {
-  //   setName("JaMarkson");
-  //   console.log("anything");
-  // };
-
+const Header = () => {
   return (
-    <div className="jumbotron ">
-      <div className="container">
-        <h1>Google Books Search</h1>
-      </div>
-    </div>
+    <>
+      <nav className="navbar justify-content-center">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            Google Books
+          </a>
+        </div>
+        <div>
+          <ul>
+            <li className="nav-item">
+              <a className="nav-link" href="/search">
+                Search
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/saved">
+                Saved
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
-}
+};
 export default Header;

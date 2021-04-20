@@ -1,6 +1,6 @@
 import React from "react";
 
-function noMatch() {
+function NoMatch() {
   return (
     <div>
       <h1>Book Not Found</h1>
@@ -8,4 +8,4 @@ function noMatch() {
   );
 }
 
-export default noMatch;
+export default NoMatch;
